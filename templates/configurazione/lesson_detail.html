@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}
+{% if is_edit %}
+    Modifica Corso
+{% else %} 
+    Detagli del corso
+{% endif %} 
+{% endblock %}
+{% load user_filters %}
+{% block content %}
+
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+
+          <div class="page-content">
+              <div class="container-fluid">
+
+                  <!-- start page title -->
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                              <h4 class="mb-sm-0">Data Creazione : {{ one_lesson.pub_date|date:"d E Y" }}</h4>
+<div class="page-title-right">
+                                  <ol class="breadcrumb m-0">
+<div class="d-flex flex-wrap gap-2">
+                                            
+											<a href="javascript:history.back();" class="btn btn-primary waves-effect waves-light">Torna</a>
+									  
+                                        </div>
+                                      
+                                  </ol>
+                              </div>
+
+
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end page title -->
+					<div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                             <div class="card-body">
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <label class="form-label">Nome corso ( max 23 caratteri )</label>
+                                            <input id="nome" type="text" name="nome" class="form-control" value="{{ one_lesson.nome }}">
+                                        </div>
+                                        <div class="row placeholder-xs">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <label class="form-label">Descrizione</label>
+                                            <textarea id="descrizione" name="descrizione" class="form-control" rows="12" >{{ one_lesson.descrizione }}</textarea>
+                                        </div>
+                                        <div class="row placeholder-xs">
+                                        </div>
+                                            <div class="col-lg-6">
+                                                <label class="form-label">Costo base del corso</label>
+                                                <input id="costo_base" name="costo_base" type="text" class="form-control" value="{{ one_lesson.costo_base }}"> 
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <label class="form-label">Tipologia Lezione:</label>
+                                               
+                                                <select id="tipologia_lezione" name="tipologia_lezione" class="form-control">
+
+                                                    <option value="Gruppo" selected="selected"> Gruppo </option>
+                                                    <option value="Privata" > Privata </option>
+
+                                                </select>
+                                            </div>
+                                    </div> 
+                                    <div class="row placeholder-xs">
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <label>{{ one_lesson.pk }}</label>
+                                        {% if user.is_authenticated and user == one_lesson.author %}     
+                                            <a type="submit" href="{% url 'configuration:lesson_edit' one_lesson.pk %}" class="btn btn-primary">Modifica Corso</a>&nbsp;&nbsp;&nbsp;
+                                            <a type="submit" href="{% url 'configuration:lesson_delete' one_lesson.pk %}" class="btn btn-primary">Elimina Corso</a>
+                                        {% else %}
+                                        <br>
+                                        {% endif %}
+                                    </div>                    
+                                </div> 
+                            </div>
+                  <!-- end row -->
+                </div>
+              </div>
+              <!-- container-fluid -->
+          </div>
+          <!-- End Page-content -->
+        </div>
+
+      </div>
+      <!-- end main content-->
+
+  </div>
+  <!-- END layout-wrapper -->
+
+
+
+  <!--start back-to-top-->
+  <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+      <i class="ri-arrow-up-line"></i>
+  </button>
+  <!--end back-to-top-->
+
+
+
+{% endblock %}

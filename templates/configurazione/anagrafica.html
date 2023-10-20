@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+
+{% block title %}Anagrafica palestra{% endblock %}
+{% block content %}
+
+
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+
+          <div class="page-content">
+              <div class="container-fluid">
+
+                  <!-- start page title -->
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                              <h4 class="mb-sm-0">Anagrafica palestra</h4>
+
+
+
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end page title -->
+				  
+					<div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1">Codice anagrafica : P10.136 Data attivazione : 11-05-2021</h4>
+                                    
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                    
+                                    <div class="live-preview">
+                                        
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="firstNameinput" class="form-label">Ragione sociale</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.ragione }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="lastNameinput" class="form-label">Tipo attivita' svolta</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.attivita }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="compnayNameinput" class="form-label">Indirizzo:</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.indirizzo }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-1">
+                                                    <div class="mb-3">
+                                                        <label for="phonenumberInput" class="form-label">Civico:</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.civico }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-2">
+                                                    <div class="mb-3">
+                                                        <label for="emailidInput" class="form-label">Comune:</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.comune }}" disabled>
+                                                    </div>
+                                                </div>
+												<div class="col-md-1">
+                                                    <div class="mb-3">
+                                                        <label for="emailidInput" class="form-label">Provincia:</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.provincia }}" disabled>
+                                                    </div>
+                                                </div>
+												<div class="col-md-2">
+                                                    <div class="mb-3">
+                                                        <label for="emailidInput" class="form-label">Cap:</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.cap }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="address1ControlTextarea" class="form-label">Email</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.email }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-md-3">
+                                                    <div class="mb-3">
+                                                        <label for="address1ControlTextarea" class="form-label">Telefono Fisso</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.telefono_fisso }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->												
+                                                <div class="col-md-3">
+                                                    <div class="mb-3">
+                                                        <label for="address1ControlTextarea" class="form-label">Telefono Cellulare</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.telefono_cellulare }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->												
+												
+												
+                                                <div class="col-md-3">
+                                                    <div class="mb-3">
+                                                        <label for="citynameInput" class="form-label">Partita Iva</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.partita_iva }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="mb-3">
+                                                        <label for="citynameInput" class="form-label">Codice Fiscale</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.codice_fiscale }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="mb-3">
+                                                        <label for="citynameInput" class="form-label">Regime Fiscale:</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.regime_fiscale }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="mb-3">
+                                                        <label for="citynameInput" class="form-label">Codice Palestra Registrazione:</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.codice_palestra }}" disabled>
+                                                    </div>
+                                                </div>												
+												<!--end col-->
+												
+                                                <div class="col-md-3">
+                                                    <div class="mb-3">
+                                                        <label for="citynameInput" class="form-label">Referente</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.referente }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="mb-3">
+                                                        <label for="citynameInput" class="form-label">Abbreviativo contratto</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.abbveviativo }}" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="citynameInput" class="form-label">Nome sull'applicativo</label>
+                                                        <input type="text" class="form-control" value="{{ gym_data.nome_app }}" disabled>
+                                                    </div>
+                                                </div>											
+												
+                                                
+                                                
+
+                                                <!--end col-->
+                                            </div>
+                                            <!--end row-->
+                                        
+                                    </div>
+                     
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+
+              
+                    </div>
+
+
+              </div>
+              <!-- container-fluid -->
+          </div>
+          <!-- End Page-content -->
+
+          <footer class="footer">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-sm-6">
+                          <script>document.write(new Date().getFullYear())</script> © Yogalates.
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="text-sm-end d-none d-sm-block">
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+      </div>
+      <!-- end main content-->
+
+  </div>
+  <!-- END layout-wrapper -->
+
+
+
+  <!--start back-to-top-->
+  <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+      <i class="ri-arrow-up-line"></i>
+  </button>
+  <!--end back-to-top-->
+
+
+{% endblock %}

@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block title %}DashBoard{% endblock %}
+{% block content %}
+
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+
+          <div class="page-content">
+              <div class="container-fluid">
+
+                  <!-- start page title -->
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                              <h4 class="mb-sm-0">DashBoard</h4>
+<div class="page-title-right">
+                                  <ol class="breadcrumb m-0">
+                                      <a href="#" class="btn btn-primary">Prenota Lezione Privata</a>
+                                  </ol>
+                              </div>
+
+
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end page title -->
+
+                  <div class="row">
+                      <div class="col-xxl-3 col-sm-6">
+                          <div class="card card-animate">
+                              <div class="card-body">
+                                  <div class="d-flex justify-content-between">
+                                      <div>
+                                          <p class="fw-medium text-muted mb-0">Nuovi Utenti (ultimi 7 giorni)</p>
+                                          <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="16">16</span></h2>
+                    <a href="" class=""><i class="ri-eye-fill fs-16 align-bottom text-muted"></i> Vedi</a>
+                                      </div>
+                                      <div>
+                                          <div class="avatar-sm flex-shrink-0">
+                                              <span class="avatar-title bg-primary-subtle text-primary rounded-circle fs-4">
+                                                  <i class="ri-ticket-2-line"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div><!-- end card body -->
+                          </div> <!-- end card-->
+                      </div>
+                      <!--end col-->
+                      <div class="col-xxl-3 col-sm-6">
+                          <div class="card card-animate">
+                              <div class="card-body">
+                                  <div class="d-flex justify-content-between">
+                                      <div>
+                                          <p class="fw-medium text-muted mb-0">Certificati medici scaduti</p>
+                                          <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="0">0</span></h2>
+                    <a href="" class=""><i class="ri-eye-fill align-bottom text-muted"></i> Vedi</a>
+                                      </div>
+                                      <div>
+                                          <div class="avatar-sm flex-shrink-0">
+                                              <span class="avatar-title bg-primary-subtle text-primary rounded-circle fs-4">
+                                                  <i class="mdi mdi-timer-sand"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div><!-- end card body -->
+                          </div>
+                      </div>
+                      <!--end col-->
+                      <div class="col-xxl-3 col-sm-6">
+                          <div class="card card-animate">
+                              <div class="card-body">
+                                  <div class="d-flex justify-content-between">
+                                      <div>
+                                          <p class="fw-medium text-muted mb-0">Quote associative scadute</p>
+                                          <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="0">0</span></h2>
+                    <a href="" class=""><i class="ri-eye-fill align-bottom text-muted"></i> Vedi</a>
+                                      </div>
+                                      <div>
+                                          <div class="avatar-sm flex-shrink-0">
+                                              <span class="avatar-title bg-primary-subtle text-primary rounded-circle fs-4">
+                                                  <i class="ri-shopping-bag-line"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div><!-- end card body -->
+                          </div>
+                      </div>
+                      <!--end col-->
+                      <div class="col-xxl-3 col-sm-6">
+                          <div class="card card-animate">
+                              <div class="card-body">
+                                  <div class="d-flex justify-content-between">
+                                      <div>
+                                          <p class="fw-medium text-muted mb-0">Rate scadute</p>
+                                          <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="0">0</span></h2>
+                    <a href="" class=""><i class="ri-eye-fill align-bottom text-muted"></i> Vedi</a>
+                                      </div>
+                                      <div>
+                                          <div class="avatar-sm flex-shrink-0">
+                                              <span class="avatar-title bg-primary-subtle text-primary rounded-circle fs-4">
+                                                  <i class="ri-delete-bin-line"></i>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div><!-- end card body -->
+                          </div>
+                      </div>
+                      <!--end col-->
+                  </div>
+                  <!--end row-->
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="card">
+                              <div class="card-header align-items-center d-flex">
+                                  <h4 class="card-title mb-0 flex-grow-1">Lezioni di Oggi domenica 8 ottobre 2023 </h4>
+
+                              </div><!-- end card header -->
+
+                              <div class="card-body">
+                                  
+                                  <div class="live-preview">
+                                      <div class="table-responsive">
+                                          <table class="table align-middle table-nowrap mb-0">
+                                              <thead>
+                                                  <tr>
+                                                      <th scope="col">Ora Inizio e fine Lezione</th>
+                                                      <th scope="col">Nome Lezione</th>
+                                                      <th scope="col">Nome istruttore</th>
+                                                      <th scope="col">Livello</th>
+                                                      <th scope="col">Posti totale</th>
+                                                      <th scope="col">Occupati</th>
+                                                      <th scope="col">Disponibile</th>
+                                                      <th scope="col">Partecipanti</th>
+                                                      <th scope="col">Azioni</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                      <th scope="row">09:45 - 10:45</th>
+                                                      <td>Pilates Reformer risveglio, livello base</td>
+                                                      <td>Valeria</td>
+                                                      <td>Base</td>
+                                                      <td>6</td>
+                                                      <td>5</td>
+                                                      <td>1</td>
+                                                      <td><a href="javascript:void(0);"><i class="ri-eye-fill align-bottom text-muted"></i></a> Vedi</td>
+                                                      <td>
+													  <a class="edit-item-btn" href="#showModal" data-bs-toggle="modal">
+													  <i class="ri-pencil-fill align-bottom text-muted"></i>
+													  </a>
+													  </td>
+                                                  </tr>
+
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div>
+
+                                  
+                              </div><!-- end card-body -->
+                          </div><!-- end card -->
+                      </div>
+                      <!-- end col -->
+
+
+                      <!-- end col -->
+                  </div>
+                  <!-- end row -->
+
+              </div>
+              <!-- container-fluid -->
+          </div>
+          <!-- End Page-content -->
+
+          <footer class="footer">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-sm-6">
+                          <script>document.write(new Date().getFullYear())</script> © Yogalates.
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="text-sm-end d-none d-sm-block">
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+      </div>
+      <!-- end main content-->
+
+  </div>
+  <!-- END layout-wrapper -->
+
+
+
+  <!--start back-to-top-->
+  <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+      <i class="ri-arrow-up-line"></i>
+  </button>
+  <!--end back-to-top-->
+
+
+
+
+
+
+
+{% endblock %}

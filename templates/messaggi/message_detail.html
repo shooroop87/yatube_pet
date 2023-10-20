@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}
+{% if is_edit %}
+    Modifica Messaggio
+{% else %} 
+    Crea Nuovo Messaggio
+{% endif %} 
+{% endblock %}
+{% load user_filters %}
+{% block content %}
+
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+
+          <div class="page-content">
+              <div class="container-fluid">
+
+                  <!-- start page title -->
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                              <h4 class="mb-sm-0">Crea Nuovo Messaggio</h4>
+<div class="page-title-right">
+                                  <ol class="breadcrumb m-0">
+<div class="d-flex flex-wrap gap-2">
+                                            
+											<a href="javascript:history.back();" class="btn btn-primary waves-effect waves-light">Torna</a>
+									  
+                                        </div>
+                                      
+                                  </ol>
+                              </div>
+
+
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end page title -->
+					<div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                             <div class="card-body">
+
+                                <div class="card-body">
+
+                                    
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <label class="form-label">Oggetto messaggio</label>
+                                            <input id="id_oggetto" type="text" class="form-control" value="{{ one_message.oggetto }}" >
+                                        </div>
+                                        <div class="row placeholder-xs">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <label class="form-label">Messaggio</label>
+                                            <textarea id="id_messaggio" class="form-control" rows="12" >{{ one_message.messaggio }}</textarea>
+                                        </div>
+
+
+                                    </div> 
+                                    <div class="row placeholder-xs">
+                                    </div>
+                                    <div class="col-lg-12">         
+
+                                    </div>
+                                  
+                                </div> 
+
+
+
+								
+								
+
+
+                                    
+					
+
+                            </div>
+                  <!-- end row -->
+                </div>
+              </div>
+              <!-- container-fluid -->
+          </div>
+          <!-- End Page-content -->
+        </div>
+
+      </div>
+      <!-- end main content-->
+
+  </div>
+  <!-- END layout-wrapper -->
+
+
+
+  <!--start back-to-top-->
+  <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+      <i class="ri-arrow-up-line"></i>
+  </button>
+  <!--end back-to-top-->
+
+
+
+{% endblock %}
